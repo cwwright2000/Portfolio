@@ -1,0 +1,30 @@
+#include <iostream> // Let's us use input and output funcions
+using namespace std; //adds domain so we don't have to write std:: 
+int main()
+{
+
+		int i, num;
+		cout << "Enter number ";
+		cin >> num;
+		//Enter's number
+		if (num > 1) {//checks if number is valid
+		cout << "Even Numbers: ";
+		for (i = 1; i <= num; i++)//lists even numbers
+		{
+			if (i % 2 == 0)
+			{
+				cout << i << ", "; 
+			}
+
+		};
+		cout << endl; //seperates the even and odd numbers
+		cout << "Odd Numbers: ";
+		for (i = 1;i <= num; i++)//lists odd numbers
+		{
+			if (i % 2 == !0) {
+				cout << i << ", ";
+			}
+		}
+	}
+		else { cout << "Input Positive Number"; }//for if number is not valid
+}
