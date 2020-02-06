@@ -1,0 +1,11 @@
+#include <iostream> //allows input and output.
+using namespace std; //difines the namespace allowing you to not have to define std:: on every cin, cout, and endl.
+
+int main()
+{
+	char name[40];
+	cout << "please enter your first name: "; //text for prompt,
+	cin >> name; //Inputs user response,
+	cout << "hello, " << name << endl; // Printing the string with the input.
+		return 0; //returs a program with a 0 to show it is sucessful!
+}
