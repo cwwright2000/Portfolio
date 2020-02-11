@@ -1,0 +1,9 @@
+#include <iostream>//simple program to double value
+using namespace std;
+int main()
+{
+  float num;
+	cout << "enter number";
+	cin >>num;
+	cout<< num * 2;
+}
