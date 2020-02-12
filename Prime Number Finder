@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num , i, flag; //sets up flag integer and other variables
+    flag = 0;
+    cout << "Enter Number";
+    cin >> num;
+    for ( i=2; i<num; i++) //Checks if numbr is prime if so it flags it and breaks the loop.
+    {
+        if (num % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+      
+    }
+    if (flag == 0) //Outputs the answer relative to flag.
+        cout << "Prime";
+    else
+        cout << "Not Prime";
+}
