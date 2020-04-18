@@ -1,0 +1,51 @@
+#include <iostream> //sets up input output and namespace
+using namespace std;
+
+void MeanMinMax(int a[], int userSize, int& min, int& max, int& mean)//function takes in the array, user input, and 3 references to calculate min, max, and mean
+{
+    min = a[0];//loop finds the minumum by checking if the next value is smaller then min
+    for (int i = 0; i < userSize; i++) {
+        if (min > a[i]) {
+            min = a[i];
+        }
+    }
+    max = a[0];//loop that finds the max in similar way
+    for (int i = 0; i <userSize; i++) {
+        if (max < a[i]) {
+            max = a[i];
+        }
+
+    }
+    mean = 0;
+    int sum = 0;
+    for (int i = 0; i < userSize; i++) //loop adds all elements in a temp variable called sum
+    {
+        sum += a[i];
+        
+    }
+    mean = sum/userSize; //devides sum by userSize or the size of the arryay
+}
+int main()
+{
+    const int SIZE = 100;
+    int array[SIZE];
+    int userSize, temp, min, max, mean; //initializes all variables
+    cout << "Size of array:";//asks size of array
+    cin >> userSize;
+    if (userSize > SIZE) {
+        cerr << "Array requested too large";
+    } //if over 100 tells you to pick a new number 
+    else
+    {
+        for (int i = 0; i < userSize; i++) // initializes user input in array
+        {
+            cout << "Enter Element "<<i<<": ";
+            cin >> array[i];       
+            cout << endl;
+        }
+        MeanMinMax(array,userSize, min, max, mean);//calls function at top
+        cout << "Minimum value: "<<min<<endl<<"Maximum value: "<<max<<endl<<"Mean value: "<<mean;//displays the functions results
+       
+    }
+   
+}
